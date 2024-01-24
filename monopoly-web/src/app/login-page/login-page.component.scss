@@ -1,0 +1,60 @@
+@import '../../styles.scss';
+
+#login-main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $main-div-color;
+    height: 100vh;
+
+    #login-content-div{
+        display: flex;
+        flex-direction: column;
+        width: 18%;
+        min-width: 256px;
+        height: 50%;
+        min-height: 540px;
+        background-color: $sub-div-color;
+        border: $sub-div-border;
+        border-radius: 20px;
+        padding: 40px;
+
+        #logo-div{
+
+        }
+
+        #switch-div{
+            
+            #login-switch{
+                display: inline-block;
+                height: 42px;
+                width: 21px;
+                background-color: blue;
+
+                input{
+                    height: 0;
+                    width: 0;
+                    opacity: 0;
+                }
+
+                #login-switch-slider{
+                    
+                }
+            }
+        }
+
+        #inputs-div{
+
+        }
+
+        #login-div-button{
+
+        }
+
+        #sign-div{
+            
+        }
+    }
+
+
+}

@@ -1,0 +1,53 @@
+
+
+<ng-container *ngIf="cardData.type === 'property'; else playingCard">
+    <ng-container *ngIf="cardData.secondaryColor != null; else singlePropertyCard">
+        <div class="playing-card-div double property-card" [ngClass]="{'brown-card' : cardData.color === 'brown', 'light-blue-card' : cardData.color === 'light-blue', 'pink-card' : cardData.color === 'pink', 'orange-card' : cardData.color === 'orange', 'red-card' : cardData.color === 'red', 'yellow-card' : cardData.color === 'yellow', 'green-card' : cardData.color === 'green', 'blue-card' : cardData.color === 'blue', 'station-card' : cardData.color === 'station', 'utility-card' : cardData.color === 'utility'}">
+            <span class="card-name">{{cardData.name}}</span>
+            <span class="secondary-card-name" [ngClass]="{'brown' : cardData.secondaryColor === 'brown', 'light-blue' : cardData.secondaryColor === 'light-blue', 'pink' : cardData.secondaryColor === 'pink', 'orange' : cardData.secondaryColor === 'orange', 'red' : cardData.secondaryColor === 'red', 'yellow' : cardData.secondaryColor === 'yellow', 'green' : cardData.secondaryColor === 'green', 'blue' : cardData.secondaryColor === 'blue', 'station' : cardData.secondaryColor === 'station', 'utility' : cardData.secondaryColor === 'utility'}">{{cardData.name}}</span>
+            <div class="other-info">
+                <span class="info-type">{{cardData.type.toUpperCase()}}</span>
+                <div class="divider-div"></div>
+                <span class="info-value">{{cardData.value}}M</span>
+            </div>
+            
+        </div>
+    </ng-container>
+
+    <ng-template #singlePropertyCard>
+        <div class="playing-card-div property-card" [ngClass]="{'brown-card' : cardData.color === 'brown', 'light-blue-card' : cardData.color === 'light-blue', 'pink-card' : cardData.color === 'pink', 'orange-card' : cardData.color === 'orange', 'red-card' : cardData.color === 'red', 'yellow-card' : cardData.color === 'yellow', 'green-card' : cardData.color === 'green', 'blue-card' : cardData.color === 'blue', 'station-card' : cardData.color === 'station', 'utility-card' : cardData.color === 'utility'}">
+            <span class="card-name">{{cardData.name}}</span>
+            <div class="other-info">
+                <span class="info-type">{{cardData.type.toUpperCase()}}</span>
+                <div class="divider-div"></div>
+                <span class="info-value">{{cardData.value}}M</span>
+            </div>
+        </div>
+    </ng-template>
+</ng-container>
+
+
+<ng-template #playingCard>
+    <div class="playing-card-div" [ngClass]="{'action-card': cardData.type === 'action', 'money-card': cardData.type === 'money', 'm-1' : cardData.color === '1m', 'm-2' : cardData.color === '2m', 'm-3' : cardData.color === '3m', 'm-4' : cardData.color === '4m', 'm-5' : cardData.color === '5m', 'm-10' : cardData.color === '10m'}">
+
+        <ng-container *ngIf="cardData.type === 'action'; else moneyCard">
+            <span class="card-name">{{cardData.name}}</span>
+            <div class="other-info">
+                <span class="info-type">{{cardData.type.toUpperCase()}}</span>
+                <div class="divider-div"></div>
+                <span class="info-value">{{cardData.value}}M</span>
+            </div>
+        </ng-container>
+
+        <ng-template #moneyCard>
+            <span class="card-name">{{cardData.name}}</span>
+
+            <div class="other-info">
+                <span class="info-type">{{cardData.type.toUpperCase()}}</span>
+                <div class="divider-div"></div>
+                <span class="info-value">{{cardData.value}}M</span>
+            </div>
+        </ng-template>
+        
+    </div>
+</ng-template>

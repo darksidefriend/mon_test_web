@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap');
+
+$main-div-color: #313E42;
+$sub-div-color: #2E3335;
+
+$monopoly-blue: #55C5E9;
+$monopoly-red: #E95555;
+
+$stat-money: #21942D;
+
+$card-brown: #A0522D;
+$card-light-blue: #55C5E9;
+$card-pink: #C220B2;
+$card-orange: #DE7310;
+$card-red: #CE3535;
+$card-yellow: #DADE16;
+$card-green: #0BA01A;
+$card-blue: #146AEB;
+$card-station: #55C5E9;
+$card-utility: #33B998;
+$card-joker: #F5F5F5;
+$card-house: #00AF27;
+$card-hotel: #E95555;
+$card-action: #E95555;
+
+$sub-div-border: 2px solid $monopoly-blue;
+
+html, body{
+    font-family: 'Wix Madefor Display', sans-serif;
+    margin: 0;
+    height: auto;
+    min-height: 100vh;
+}
+
+.red-text{
+    color: $monopoly-red;
+}
+
+.blue-text{
+    color: $monopoly-blue;
+}
+
+.red{
+    background-color: $monopoly-red;
+}
+
+.blue{
+    background-color: $monopoly-blue;
+}
+
+
+button{
+    font-family: 'Wix Madefor Display', sans-serif;
+    outline: none;
+    border: 0;
+    padding: 0;
+}

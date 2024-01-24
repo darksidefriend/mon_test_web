@@ -1,0 +1,27 @@
+<div id="cards-page-div">
+    <div id="cards-page-content">
+        <div id="cards-header-div">
+            <span class="blue-text" [innerHTML]="activeCardsPage.header"></span>
+        </div>
+        <div id="cards-sub-content">
+            <div id="card-images-div">
+                <div class="card-image-div">
+                    <img src="{{activeCardsPage.cardImageSrc}}" alt="">
+                </div>
+                <ng-container *ngIf="activeCardsPage.additionalCardImageSrc != null">
+                    <div class="card-image-div">
+                        <img src="{{activeCardsPage.additionalCardImageSrc}}" alt="">
+                    </div>
+                </ng-container>
+            </div>
+            <div id="card-text-div">
+                <div id="card-header-div">
+                    <span class="blue-text" [innerHTML]="activeCardsPage.cardHeader"></span>
+                </div>
+                <div id="card-main-text-div">
+                    <span class="blue-text" [innerHTML]="activeCardsPage.cardText"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

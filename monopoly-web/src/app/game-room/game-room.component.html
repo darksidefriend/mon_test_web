@@ -1,0 +1,19 @@
+<div id="game-room-div">
+    <div id="enemies-fields-div">
+        <md-enemy-field></md-enemy-field>
+        <md-enemy-field></md-enemy-field>
+        <md-enemy-field></md-enemy-field>
+    </div>
+    <div id="played-card-div">
+        <span>played cards works!</span>
+    </div>
+    <div id="stats-cards-div">
+        <span>stats & cards works!</span>
+    </div>
+    <div id="player-deck-div">
+        <span>player-deck works!</span>
+        <ng-container *ngFor="let card of cardArray">
+            <md-playing-card [cardData]="card"></md-playing-card>
+        </ng-container>
+    </div>
+</div>

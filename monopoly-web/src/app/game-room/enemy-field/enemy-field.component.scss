@@ -1,0 +1,230 @@
+@import '../../../styles.scss';
+
+.enemy-main-div{
+    min-height: 152px;
+    height: fit-content;
+    width: 236px;
+    background-color: $sub-div-color;
+    border-radius: 0px 0px 10px 10px;
+    border: 2px solid #55c4e980;
+    border-top: none;
+    padding: 10px;
+
+    .enemy-info-div{
+        display: flex;
+        flex-direction: row;
+
+        .enemy-img-div{
+            height: 40px;
+            width: 40px;
+            border-radius: 40px;
+            background-color: #55c4e980;
+
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .enemy-username-status-div{
+            margin-left: auto;
+            width: 128px;
+            display: flex;
+            flex-direction: column;
+
+            .username-span{
+                font-size: 16px;
+                font-weight: 600;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            .enemy-money-turns-div{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                column-gap: 5px;
+
+                .turn-counter{
+                    height: 10px;
+                    width: 10px;
+                    border-radius: 10px;
+                    border: 1px solid $monopoly-blue;
+                    background-color: $sub-div-color;
+
+                    &.active{
+                        background-color: $monopoly-blue;
+                    }
+                }
+
+                .money-counter{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 16px;
+                    border: 1px solid $stat-money;
+                    border-radius: 6px;
+                    color: $stat-money;
+                    font-size: 12px;
+                    font-weight: 700;
+                    margin-left: auto;
+                }
+            }
+        }
+
+        .enemy-deckcounter-div{
+            height: 40px;
+            width: 30px;
+            background-color: $monopoly-blue;
+            font-size: 32px;
+            font-weight: 600;
+            color: $sub-div-color;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+        }
+    }
+
+    .divider-div{
+        width: 100%;
+        height: 2px;
+        margin-top: 10px;
+        border-radius: 2px;
+    }
+
+    .enemy-cards-div{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 5px;
+        margin-top: 10px;
+        // justify-content: center;
+        
+        .mini-card{
+            height: 40px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 600;
+            border-radius: 6px;
+
+            &:hover{
+                cursor: pointer;
+            }
+
+            &.brown-card{
+                border: 2px solid $card-brown;
+                color: $card-brown;
+
+                &:hover{
+                    background-color: $card-brown;
+                    color: $sub-div-color;
+                }
+            }
+            
+            &.light-blue-card{
+                border: 2px solid $card-light-blue;
+                color: $card-light-blue;
+
+                &:hover{
+                    background-color: $card-light-blue;
+                    color: $sub-div-color;
+                }
+            }
+            
+            &.pink-card{
+                border: 2px solid $card-pink;
+                color: $card-pink;
+
+                &:hover{
+                    background-color: $card-pink;
+                    color: $sub-div-color;
+                }
+            }
+            
+            &.orange-card{
+                border: 2px solid $card-orange;
+                color: $card-orange;
+
+                &:hover{
+                    background-color: $card-orange;
+                    color: $sub-div-color;
+                }
+            }
+            
+            &.red-card{
+                border: 2px solid $card-red;
+                color: $card-red;
+
+                &:hover{
+                    background-color: $card-red;
+                    color: $sub-div-color;
+                }
+            }
+            
+            &.yellow-card{
+                border: 2px solid $card-yellow;
+                color: $card-yellow;
+
+                &:hover{
+                    background-color: $card-yellow;
+                    color: $sub-div-color;
+                }
+            }
+            
+            &.green-card{
+                border: 2px solid $card-green;
+                color: $card-green;
+
+                &:hover{
+                    background-color: $card-green;
+                    color: $sub-div-color;
+                }
+            }
+            
+            &.blue-card{
+                border: 2px solid $card-blue;
+                color: $card-blue;
+
+                &:hover{
+                    background-color: $card-blue;
+                    color: $sub-div-color;
+                }
+            }
+            
+            &.station-card{
+                border: 2px solid $card-station;
+                color: $sub-div-color;
+
+                span{
+                    text-shadow: -1px 1px 0 $card-station, 1px 1px 0 $card-station, 1px -1px 0 $card-station, -1px -1px 0 $card-station;
+                }
+
+                &:hover{
+                    background-color: $card-station;
+                    color: $card-station;
+                    
+                    span{
+                        text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+                    }
+                }
+            }
+            
+            &.utility-card{
+                border: 2px solid $card-utility;
+                color: $card-utility;
+
+                &:hover{
+                    background-color: $card-utility;
+                    color: $sub-div-color;
+                }
+            }
+        }
+    }
+}

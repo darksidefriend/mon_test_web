@@ -1,0 +1,27 @@
+
+<div id="tutorial-main-div">
+    <div id="tutorial-content-div">
+        <span *ngIf="isChildRouteOpen()" id="tutorial-main-header" class="blue-text"><span class="red-text">MONOPOLY</span> Deal. Правила игры</span>
+
+        <ng-container *ngIf="!isChildRouteOpen(); else routerDiv">
+            <div id="tutorial-starter-text">
+                <span class="blue-text">Для лучшего игрового опыта с самой первой партии настоятельно рекомендуем ознакомится с правилами игры</span>
+            </div>
+            <div id="tutorial-buttons-div">
+                <button id="continue-tutorial-btn" class="tutorial-button blue" (click)="continueTutorial()">
+                    <span>Я готов ознакомиться с правилам</span>
+                </button>
+                <button id="skip-tutorial-btn" class="tutorial-button red" (click)="goToRoomsList()">
+                    <span>Я все пойму налету, запускайте меня скорее в матч</span>
+                </button>
+            </div>
+        </ng-container>
+
+        <ng-template #routerDiv >
+            <router-outlet></router-outlet>
+        </ng-template>
+    </div>
+    
+    <button (click)="changePage('next')">next page</button>
+    <button (click)="changePage('previous')">previous page</button>
+</div>

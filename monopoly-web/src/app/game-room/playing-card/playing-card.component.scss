@@ -1,0 +1,701 @@
+@import '../../../styles.scss';
+
+.playing-card-div{
+    display: flex;
+    flex-direction: column;
+    width: 128px;
+    height: 180px;
+    padding: 10px;
+    background-color: $sub-div-color;
+    border-radius: 10px;
+
+    .other-info{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: auto;
+        font-weight: 600;
+
+        .info-type{
+            margin-left: auto;
+        }
+
+        .divider-div{
+            background-color: aliceblue;
+            width: 2px;
+            height: 19px;
+            border-radius: 2px;
+            margin-left: auto;
+        }
+
+        .info-value{
+            margin-left: auto;
+        }
+    }
+}
+
+.property-card{
+
+    transition: all 0.2s ease-out;
+
+    .card-name{
+        font-size: 20px;
+        font-weight: 600;
+        max-width: 109px;
+        word-break: break-all;
+    }
+
+    &:hover{
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &.brown-card{
+        border: 2px solid $card-brown;
+        color: $card-brown;
+        
+        .card-name{
+            color: $sub-div-color;
+            text-shadow: -1px 1px 0 $card-brown, 1px 1px 0 $card-brown, 1px -1px 0 $card-brown, -1px -1px 0 $card-brown;
+        }
+
+        .other-info{
+            .divider-div{
+                background-color: $card-brown;
+            }
+        }
+        
+        &:hover{
+            background-color: $card-brown;
+            color: $sub-div-color;
+            
+            .card-name{
+                color: $card-brown;
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+    
+            .other-info{
+                .divider-div{
+                    background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+    
+    &.light-blue-card{
+        border: 2px solid $card-light-blue;
+        color: $card-light-blue;
+        
+        .card-name{
+            color: $sub-div-color;
+            text-shadow: -1px 1px 0 $card-light-blue, 1px 1px 0 $card-light-blue, 1px -1px 0 $card-light-blue, -1px -1px 0 $card-light-blue;
+        }
+
+        .other-info{
+            .divider-div{
+                background-color: $card-light-blue;
+            }
+        }
+        
+        &:hover{
+            background-color: $card-light-blue;
+            color: $sub-div-color;
+            
+            .card-name{
+                color: $card-light-blue;
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+    
+            .other-info{
+                .divider-div{
+                    background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+    
+    &.pink-card{
+        border: 2px solid $card-pink;
+        color: $card-pink;
+        
+        .card-name{
+            color: $sub-div-color;
+            text-shadow: -1px 1px 0 $card-pink, 1px 1px 0 $card-pink, 1px -1px 0 $card-pink, -1px -1px 0 $card-pink;
+        }
+
+        .other-info{
+            .divider-div{
+                background-color: $card-pink;
+            }
+        }
+        
+        &:hover{
+            background-color: $card-pink;
+            color: $sub-div-color;
+            
+            .card-name{
+                color: $card-pink;
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+    
+            .other-info{
+                .divider-div{
+                    background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+    
+    &.orange-card{
+        border: 2px solid $card-orange;
+        color: $card-orange;
+        
+        .card-name{
+            color: $sub-div-color;
+            text-shadow: -1px 1px 0 $card-orange, 1px 1px 0 $card-orange, 1px -1px 0 $card-orange, -1px -1px 0 $card-orange;
+        }
+
+        .other-info{
+            .divider-div{
+                background-color: $card-orange;
+            }
+        }
+        
+        &:hover{
+            background-color: $card-orange;
+            color: $sub-div-color;
+            
+            .card-name{
+                color: $card-orange;
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+    
+            .other-info{
+                .divider-div{
+                    background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+    
+    &.red-card{
+        border: 2px solid $card-red;
+        color: $card-red;
+        
+        .card-name{
+            color: $sub-div-color;
+            text-shadow: -1px 1px 0 $card-red, 1px 1px 0 $card-red, 1px -1px 0 $card-red, -1px -1px 0 $card-red;
+        }
+
+        .other-info{
+            .divider-div{
+                background-color: $card-red;
+            }
+        }
+        
+        &:hover{
+            background-color: $card-red;
+            color: $sub-div-color;
+            
+            .card-name{
+                color: $card-red;
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+    
+            .other-info{
+                .divider-div{
+                    background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+    
+    &.yellow-card{
+        border: 2px solid $card-yellow;
+        color: $card-yellow;
+        
+        .card-name{
+            color: $sub-div-color;
+            text-shadow: -1px 1px 0 $card-yellow, 1px 1px 0 $card-yellow, 1px -1px 0 $card-yellow, -1px -1px 0 $card-yellow;
+        }
+
+        .other-info{
+            .divider-div{
+                background-color: $card-yellow;
+            }
+        }
+        
+        &:hover{
+            background-color: $card-yellow;
+            color: $sub-div-color;
+            
+            .card-name{
+                color: $card-yellow;
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+    
+            .other-info{
+                .divider-div{
+                    background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+    
+    &.green-card{
+        border: 2px solid $card-green;
+        color: $card-green;
+        
+        .card-name{
+            color: $sub-div-color;
+            text-shadow: -1px 1px 0 $card-green, 1px 1px 0 $card-green, 1px -1px 0 $card-green, -1px -1px 0 $card-green;
+        }
+
+        .other-info{
+            .divider-div{
+                background-color: $card-green;
+            }
+        }
+        
+        &:hover{
+            background-color: $card-green;
+            color: $sub-div-color;
+            
+            .card-name{
+                color: $card-green;
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+    
+            .other-info{
+                .divider-div{
+                    background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+    
+    &.blue-card{
+        border: 2px solid $card-blue;
+        color: $card-blue;
+        
+        .card-name{
+            color: $sub-div-color;
+            text-shadow: -1px 1px 0 $card-blue, 1px 1px 0 $card-blue, 1px -1px 0 $card-blue, -1px -1px 0 $card-blue;
+        }
+
+        .other-info{
+            .divider-div{
+                background-color: $card-blue;
+            }
+        }
+        
+        &:hover{
+            background-color: $card-blue;
+            color: $sub-div-color;
+            
+            .card-name{
+                color: $card-blue;
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+    
+            .other-info{
+                .divider-div{
+                    background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+
+    &.station-card{
+        border: 2px solid $card-station;
+        color: $card-station;
+        
+        .card-name{
+            color: $card-station;
+        }
+
+        .other-info{
+            .divider-div{
+                background-color: $card-station;
+            }
+        }
+        
+        &:hover{
+            background-color: $card-station;
+            color: $sub-div-color;
+            
+            .card-name{
+                color: $sub-div-color;
+            }
+    
+            .other-info{
+                .divider-div{
+                    background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+    
+    &.utility-card{
+        border: 2px solid $card-utility;
+        color: $card-utility;
+        
+        .card-name{
+            color: $sub-div-color;
+            text-shadow: -1px 1px 0 $card-utility, 1px 1px 0 $card-utility, 1px -1px 0 $card-utility, -1px -1px 0 $card-utility;
+        }
+
+        .other-info{
+            .divider-div{
+                background-color: $card-utility;
+            }
+        }
+        
+        &:hover{
+            background-color: $card-utility;
+            color: $sub-div-color;
+            
+            .card-name{
+                color: $card-utility;
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+    
+            .other-info{
+                .divider-div{
+                    background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+
+    &.double{
+
+        &:hover{
+            .secondary-card-name{
+                color: $sub-div-color !important;
+            }
+        }
+
+        .secondary-card-name{
+            font-size: 14px;
+            font-weight: 600;
+            max-width: 76px;
+            word-break: break-all;
+
+            &.brown{
+                color: rgba(160, 82, 45, 0.7);
+            }
+            
+            &.light-blue{
+                color: rgba(85, 197, 233, 0.7);
+            }
+            
+            &.pink{
+                color: rgba(194, 32, 178, 0.7);
+            }
+            
+            &.orange{
+                color: rgba(222, 115, 16, 0.7);
+            }
+            
+            &.red{
+                color: rgba(206, 53, 53, 0.7);
+            }
+            
+            &.yellow{
+                color: rgba(218, 222, 22, 0.7);
+            }
+            
+            &.green{
+                color: rgba(11, 160, 26, 0.7);
+            }
+            
+            &.blue{
+                color: rgba(20, 106, 235, 0.7);
+            }
+            
+            &.station{
+                color: rgba(85, 197, 233, 0.7);
+            }
+            
+            &.utility{
+                color: rgba(51, 185, 152, 0.7);
+            }
+        }
+    }
+}
+
+.action-card{
+    border: 2px solid $card-action;
+    user-select: none;
+    transition: all 0.2s ease-out;
+
+    .card-name{
+        font-size: 20px;
+        font-weight: 600;
+        width: 94px;
+        word-spacing: 9999px;
+        word-break: break-all;
+        color: $sub-div-color;
+        text-shadow: -1px 1px 0 $card-action, 1px 1px 0 $card-action, 1px -1px 0 $card-action, -1px -1px 0 $card-action;
+    }
+
+    .other-info{
+        color: $card-action;
+        
+        .divider-div{
+            background-color:  $card-action;
+        }
+    }
+
+    &:hover{
+        cursor: pointer;
+        background-color: $card-action;
+
+        .card-name{
+            color: $card-action;
+            text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+        }
+    
+        .other-info{
+            color: $sub-div-color;
+            
+            .divider-div{
+                background-color:  $sub-div-color;
+            }
+        }
+    }
+}
+
+.money-card{
+
+    border: 2px solid;
+    transition: all 0.2s ease-out;
+    user-select: none;
+
+    .card-name{
+        font-size: 48px;
+        font-weight: 600;
+    }
+
+    &.m-1{
+        border-color: #73E17E;
+        color: $sub-div-color;
+
+        .card-name{
+            text-shadow: -1px 1px 0 #73E17E, 1px 1px 0 #73E17E, 1px -1px 0 #73E17E, -1px -1px 0 #73E17E;
+        }
+
+        .other-info{
+            font-size: 14px;
+            font-weight: 600;
+            color: #73E17E;
+
+            .divider-div{
+                background-color: #73E17E;
+            }
+        }
+        
+        &:hover{
+            background-color: #73E17E;
+            color: #73E17E;
+        
+            .card-name{
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+        
+            .other-info{
+                color: $sub-div-color;
+        
+                .divider-div{
+                     background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+
+    &.m-2{
+        border-color: #4AD458;
+        color: $sub-div-color;
+
+        .card-name{
+            text-shadow: -1px 1px 0 #4AD458, 1px 1px 0 #4AD458, 1px -1px 0 #4AD458, -1px -1px 0 #4AD458;
+        }
+
+        .other-info{
+            font-size: 14px;
+            font-weight: 600;
+            color: #4AD458;
+
+            .divider-div{
+                background-color: #4AD458;
+            }
+        }
+        
+        &:hover{
+            background-color: #4AD458;
+            color: #4AD458;
+        
+            .card-name{
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+        
+            .other-info{
+                color: $sub-div-color;
+        
+                .divider-div{
+                     background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+    
+
+    &.m-3{
+        border-color: #34BC41;
+        color: $sub-div-color;
+
+        .card-name{
+            text-shadow: -1px 1px 0 #34BC41, 1px 1px 0 #34BC41, 1px -1px 0 #34BC41, -1px -1px 0 #34BC41;
+        }
+
+        .other-info{
+            font-size: 14px;
+            font-weight: 600;
+            color: #34BC41;
+
+            .divider-div{
+                background-color: #34BC41;
+            }
+        }
+        
+        &:hover{
+            background-color: #34BC41;
+            color: #34BC41;
+        
+            .card-name{
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+        
+            .other-info{
+                color: $sub-div-color;
+        
+                .divider-div{
+                     background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+
+    &.m-4{
+        border-color: #179524;
+        color: $sub-div-color;
+
+        .card-name{
+            text-shadow: -1px 1px 0 #179524, 1px 1px 0 #179524, 1px -1px 0 #179524, -1px -1px 0 #179524;
+        }
+
+        .other-info{
+            font-size: 14px;
+            font-weight: 600;
+            color: #179524;
+
+            .divider-div{
+                background-color: #179524;
+            }
+        }
+        
+        &:hover{
+            background-color: #179524;
+            color: #179524;
+        
+            .card-name{
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+        
+            .other-info{
+                color: $sub-div-color;
+        
+                .divider-div{
+                     background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+
+    &.m-5{
+        border-color: #0F7919;
+        color: $sub-div-color;
+
+        .card-name{
+            text-shadow: -1px 1px 0 #0F7919, 1px 1px 0 #0F7919, 1px -1px 0 #0F7919, -1px -1px 0 #0F7919;
+        }
+
+        .other-info{
+            font-size: 14px;
+            font-weight: 600;
+            color: #0F7919;
+
+            .divider-div{
+                background-color: #0F7919;
+            }
+        }
+        
+        &:hover{
+            background-color: #0F7919;
+            color: #0F7919;
+        
+            .card-name{
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+        
+            .other-info{
+                color: $sub-div-color;
+        
+                .divider-div{
+                     background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+
+    &.m-10{
+        border-color: #076210;
+        color: $sub-div-color;
+
+        .card-name{
+            text-shadow: -1px 1px 0 #076210, 1px 1px 0 #076210, 1px -1px 0 #076210, -1px -1px 0 #076210;
+        }
+
+        .other-info{
+            font-size: 14px;
+            font-weight: 600;
+            color: #076210;
+
+            .divider-div{
+                background-color: #076210;
+            }
+        }
+        
+        &:hover{
+            background-color: #076210;
+            color: #076210;
+        
+            .card-name{
+                text-shadow: -1px 1px 0 $sub-div-color, 1px 1px 0 $sub-div-color, 1px -1px 0 $sub-div-color, -1px -1px 0 $sub-div-color;
+            }
+        
+            .other-info{
+                color: $sub-div-color;
+        
+                .divider-div{
+                     background-color: $sub-div-color;
+                }
+            }
+        }
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+}

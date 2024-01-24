@@ -1,0 +1,16 @@
+@import '../../styles.scss';
+
+#game-room-div{
+    background-color: $main-div-color;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    #enemies-fields-div{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+}

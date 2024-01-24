@@ -1,0 +1,67 @@
+@import '../../../styles.scss';
+
+:host{
+    width: 100%;
+}
+
+#cards-page-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    #cards-page-content{
+        margin-top: 5%;
+        width: 80%;
+        min-width: 592px;
+
+        #cards-header-div{
+            font-size: 20px;
+            font-weight: 700;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            border-left: 6px solid #55C5E9;
+            padding-left: 34px;
+        }
+
+        #cards-sub-content{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin-top: 5%;
+
+            #card-images-div{
+
+                display: flex;
+                flex-direction: row;
+
+                .card-image-div{
+                    width: 148px;
+                    height: 235px;
+                    margin-right: 40px;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            #card-text-div{
+                margin-left: auto;
+                max-width: 404px;
+                
+                #card-header-div{
+                    font-weight: 700;
+                    font-size: 20px;
+                }
+
+                #card-main-text-div{
+                    margin-top: 5%;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

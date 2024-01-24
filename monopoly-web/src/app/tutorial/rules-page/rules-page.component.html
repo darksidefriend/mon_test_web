@@ -1,0 +1,36 @@
+<div id="rules-page-div">
+    <div id="rules-page-content">
+
+        <ng-container *ngIf="activeRulesPage.mainHeader != null">
+            <div id="rule-main-content-div" class="blue-text">
+                <span id="rule-main-header" innerHTML="{{activeRulesPage.mainHeader}}"></span>
+                <ng-container *ngIf="activeRulesPage.mainText != null">
+                    <span id="rule-main-text" innerHTML="{{activeRulesPage.mainText}}"></span>
+                </ng-container>
+            </div>
+        </ng-container>
+ 
+        <ng-container *ngIf="activeRulesPage.mainRedText != null">
+            <div id="rule-red-content-div">
+                <div id="red-box-div" class="red">
+                    <span innerHTML="{{activeRulesPage.mainRedText.boxSymbol}}"></span>
+                </div>
+                <span id="main-red-text-span" class="red-text" innerHTML="{{activeRulesPage.mainRedText.actionText}}"></span>
+            </div>
+        </ng-container>
+
+        <div id="sub-content-div">
+            <ng-container *ngIf="activeRulesPage.subImageSrc != null">
+                <div id="rule-image-div">
+                    <img src="{{activeRulesPage.subImageSrc}}" alt="">
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="activeRulesPage.subText != null">
+                <div id="rule-subtext-div">
+                    <span class="blue-text" innerHTML="{{activeRulesPage.subText}}"></span>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

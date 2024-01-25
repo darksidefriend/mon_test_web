@@ -22,6 +22,11 @@
             background-color: $sub-div-color;
             border-radius: 20px;
             padding: 15px;
+            user-select: none;
+
+            &.hoverable{
+                cursor: pointer;
+            }
         }
 
         .common-menu-item{

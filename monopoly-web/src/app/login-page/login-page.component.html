@@ -4,25 +4,35 @@
             <span class="red-text">MONOPOLY</span>
             <span class="blue-text">Deal</span>
         </div>
+
         <div id="switch-div">
             <div id="login-switch-div">
-                <label id="login-switch">
-                    <input type="checkbox">
-                    <span id="login-switch-slider"></span>
+                <label for="original-input">
+                    <input id="original-input" type="checkbox">
+                    <span id="login-switch-slider">
+                        <span id="white-dot"></span>
+                    </span>
+                    
                 </label>
             </div>
-            <div id="switch-span-div"></div>
+
+            <div id="switch-span-div">
+                <span class="selected">Логин</span>
+                <span>Регистрация</span>
+            </div>
         </div>
+
         <div id="inputs-div">
             <form [formGroup]="userDataControl">
-                <input type="text" formControlName="login">
-                <input type="password" name="" id="" formControlName="password">
+                <input type="text" formControlName="login" placeholder="Логин">
+                <input type="password" name="" id="" formControlName="password" placeholder="Пароль">
             </form>
             
         </div>
         <div id="login-button-div">
             <button (click)="test()">Войти</button>
         </div>
+
         <div id="sign-div">
             <span>Powered by Angular & Node.JS</span>
         </div>

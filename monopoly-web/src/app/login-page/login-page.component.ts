@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { HttpClient, HttpClientModule} from "@angular/common/http";
+import { HttpHeaders } from '@angular/common/http';
+
+const headers= new HttpHeaders()
+  .set('content-type', 'application/json')
+  .set('Access-Control-Allow-Origin', '*');
 
 @Component({
   selector: 'app-login-page',
@@ -13,7 +19,7 @@ export class LoginPageComponent implements OnInit {
     password: new FormControl('')
   });
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +28,10 @@ export class LoginPageComponent implements OnInit {
     console.log('login', this.userDataControl.get('login')?.value);
     console.log('password', this.userDataControl.get('password')?.value);
     
+    this.http.get('https://sql.lavro.ru/call.php?db=285312&pname=sign_in&p1=Dan&p2=123456&format=array').subscribe((data) => {
+      console.log('data', data);
+      
+    });
     
   }
 

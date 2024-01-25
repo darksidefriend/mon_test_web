@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-menu',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
+  }
+
+  goToTutorial() : void{
+    this.router.navigate(['tutorial/rules', 1]);
+  }
+
+  goToRoomsList() : void{
+    this.router.navigate(['rooms-list']);
+  }
+
+  goToCardsTutorial() : void{
+    this.router.navigate(['tutorial/cards', 1]);
   }
 
 }

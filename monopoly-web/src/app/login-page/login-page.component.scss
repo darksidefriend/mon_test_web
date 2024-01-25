@@ -20,39 +20,142 @@
         padding: 40px;
 
         #logo-div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
+            .red-text, .blue-text{
+                font-size: 28px;
+                font-weight: 700;
+            }
         }
 
         #switch-div{
-            
-            #login-switch{
-                display: inline-block;
+
+            display: flex;
+            flex-direction: row;
+            margin-top: auto;
+            user-select: none;
+
+            #login-switch-div{
                 height: 42px;
                 width: 21px;
-                background-color: blue;
+                display: block;
+                margin-right: 20px;
 
-                input{
-                    height: 0;
-                    width: 0;
-                    opacity: 0;
+                #original-input{
+                    position: absolute;
+                    height: 1px;
+                    width: 1px;
+                    overflow: hidden;
+                    clip-path: rect(0 0 0 0);
                 }
 
                 #login-switch-slider{
-                    
+                    box-sizing: border-box;
+                    height: 42px;
+                    width: 21px;
+                    position: absolute;
+                    user-select: none;
+                    display: flex;
+                    justify-content: center;
+                    background-color: $sub-div-color;
+                    border: 1px solid $monopoly-blue;
+                    border-radius: 10px;
+
+                    #white-dot{
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        background-color: $monopoly-blue;
+                        margin-top: 3px;
+                        margin-bottom: auto;
+                        transition: all 1s ease-out;
+                    }
+                }
+
+                #original-input:checked + #login-switch-slider > #white-dot{
+                    margin-top: auto;
+                    margin-bottom: 3px;
+                }
+            }
+
+            #switch-span-div{
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+                color: rgba(85, 197, 233, 0.5);
+                transition: all 0.2s ease-out;         
+
+                .selected{
+                    font-size: 20px;
+                    color: $monopoly-blue;
+                    font-weight: 700;
+                    transition: all 0.2s ease-out;
+                }
+            }
+            
+        }
+
+        #inputs-div{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
+            
+            input{
+                font-family: 'Wix Madefor Display', sans-serif;
+                width: 100%;
+                height: 40px;
+                outline: 0;
+                border: none;
+                border-bottom: 1px solid $monopoly-blue;
+                background-color: $sub-div-color;
+                font-size: 14px;
+                color: $monopoly-blue;
+                padding: 0;
+                margin-bottom: 20px;
+
+                &::placeholder{
+                    font-size: 14px;
+                    color: rgba(85, 197, 233, 0.5);
                 }
             }
         }
 
-        #inputs-div{
+        #login-button-div{
+            width: 100%;
+            height: 40px;
+            user-select: none;
+            margin-top: auto;
+            
 
-        }
+            button{
+                width: 100%;
+                height: 100%;
+                font-size: 16px;
+                font-weight: 700;
+                outline: 0;
+                border: 1px solid $monopoly-blue;
+                border-radius: 20px;
+                background-color: $sub-div-color;
+                color: $monopoly-blue;
+                transition: all 0.2s ease-out;
 
-        #login-div-button{
-
+                &:hover{
+                    cursor: pointer;
+                    background-color: $monopoly-blue;
+                    color : $sub-div-color;
+                }
+            }
         }
 
         #sign-div{
-            
+            display: flex;
+            justify-content: center;
+            margin-top: auto;
+            font-size: 14px;
+            color: rgba(85, 197, 233, 0.5);
         }
     }
 

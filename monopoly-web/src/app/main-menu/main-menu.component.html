@@ -4,15 +4,15 @@
         <div class="menu-item-div" id="current-games-div">
             <span class="blue-text">С возвращением, <span class="red-text">username</span>!</span>
         </div>
-        <div class="menu-item-div common-menu-item blue-text" id="start-game-div">
+        <div class="menu-item-div common-menu-item blue-text hoverable" id="start-game-div" (click)="goToRoomsList()">
             <span class="menu-item-header">Начать игру</span>
             <span class="menu-item-subtext">Посмотрите доступные для подключения игры или создайте свою</span>
         </div>
-        <div class="menu-item-div common-menu-item blue-text" id="game-rules-div">
+        <div class="menu-item-div common-menu-item blue-text hoverable" id="game-rules-div" (click)="goToTutorial()">
             <span class="menu-item-header">Правила игры</span>
             <span class="menu-item-subtext">Освежите знания правил</span>
         </div>
-        <div class="menu-item-div common-menu-item blue-text" id="cards-tutorial-div">
+        <div class="menu-item-div common-menu-item blue-text hoverable" id="cards-tutorial-div" (click)="goToCardsTutorial()">
             <span class="menu-item-header">Просмотр карт</span>
             <span class="menu-item-subtext">Посмотрите на карты <span class="red-text">MONOPOLY</span> Deal</span>
         </div>

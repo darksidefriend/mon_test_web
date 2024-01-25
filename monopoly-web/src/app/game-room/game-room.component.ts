@@ -11,7 +11,8 @@ export class GameRoomComponent implements OnInit {
   constructor() { }
 
   cardArray : PlayingCard[] = [
-    // {id : 1, name : 'HELSINKINKATU', type : 'property', color : 'orange', secondaryColor : null, value : 1, rent : null},
+    {id : 1, name : 'HELSINKINKATU', type : 'property', color : 'orange', secondaryColor : null, value : 1, rent : null},
+    // {id : 1, name : 'HELSINKINKATU', type : 'property', color : 'orange', secondaryColor : 'red', value : 1, rent : null},
     {id : 2, name : 'PASS THE START', type : 'action', color : null, secondaryColor : null, value : 3, rent : null},
     {id : 2, name : 'STEAL THE DEAL', type : 'action', color : null, secondaryColor : null, value : 3, rent : null},
     {id : 2, name : 'RENT', type : 'action', color : null, secondaryColor : null, value : 3, rent : null},
